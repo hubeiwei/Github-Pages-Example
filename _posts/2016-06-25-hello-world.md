@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Hello World
-category: blog
 description: Hello World
+category: blog
 ---
 
 ## Hello World
