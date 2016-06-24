@@ -28,3 +28,5 @@ class world
 
 echo hello\world::helloWorld();
 ```
+
+[LaoHu]:    http://laohu.cc  "LaoHu"
