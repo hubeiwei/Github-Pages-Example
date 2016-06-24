@@ -5,13 +5,26 @@ category: blog
 description: Hello World
 ---
 
+## Hello World
+
+* Hello World
+* Hello World
+
+1. Hello World
+2. Hello World
+
 ```php
 namespace hello;
 
 class world
 {
-    public static $string = 'Hello World';
+    const HELLO_WORLD = 'Hello World';
+    
+    public static function helloWorld ()
+    {
+        return self::HELLO_WORLD;
+    }
 }
 
-echo hello\world::$string;
+echo hello\world::helloWorld();
 ```
