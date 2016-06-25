@@ -20,10 +20,12 @@ category: blog
 
 # 无序列表
 
+## li里不带p
+
 * Hello World
 * Hello World
 
----
+## li里带p
 
 * Hello World
 
@@ -31,10 +33,12 @@ category: blog
 
 # 有序列表
 
+## li里不带p
+
 1. Hello World
 2. Hello World
 
----
+## li里带p
 
 1. Hello World
 
@@ -42,16 +46,20 @@ category: blog
 
 # 引用
 
-## 唯一正常的用法
+## 唯一正常的
 
 > 引用
 
-## 不正常的用法
+## 不正常的
 
 > 引用 > 引用
 
 > 引用
 > > 引用
+
+# 普通文本
+
+这篇文章是用来测试`Markdown`语法的，感觉有点坑，这段话是用来测试`p`标签的，一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长一定要长
 
 # 文本块
 
@@ -65,7 +73,7 @@ category: blog
     Hello World
     Hello World
 
-# 宽代码测试 for mobile：
+# 代码
 
 ```php
 namespace hello;
@@ -83,7 +91,7 @@ class world
 echo hello\world::helloWorld(self::$helloWorld);
 ```
 
-# 表格测试：
+# 表格
 
 | Hello World | Hello World | Hello World | Hello World |
 |---|---|---|---|
@@ -91,6 +99,8 @@ echo hello\world::helloWorld(self::$helloWorld);
 | Hello World | `Hello World` | Hello World | Hello World |
 | Hello World | `Hello World` | Hello World | Hello World |
 | Hello World | `Hello World` | Hello World | Hello World |
+
+# 图片
 
 ![alipay](https://raw.githubusercontent.com/hubeiwei/laohu-yii2/master/web/ali_pay.jpg "支付宝")
 
