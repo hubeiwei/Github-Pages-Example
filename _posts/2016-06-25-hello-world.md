@@ -17,18 +17,20 @@ category: blog
 1. Hello World
 2. Hello World
 
+长代码测试 for mobile：
+
 ```php
 namespace hello;
 
 class world
 {
-    const HELLO_WORLD = 'Hello World';
+    public static $helloWorld = 'Hello World';
     
-    public static function helloWorld ()
+    public static function helloWorld ($helloWorld = 'Hello World')
     {
-        return self::HELLO_WORLD;
+        return $helloWorld;
     }
 }
 
-echo hello\world::helloWorld();
+echo hello\world::helloWorld(self::$helloWorld);
 ```
