@@ -2,7 +2,7 @@
 layout: post
 title: Markdown样式测试2
 description: 去找了个Markdown示例以便调整样式
-date: 2016-06-26 2:3:3
+date: 2016-06-26 02:03:03
 category: blog
 ---
 
