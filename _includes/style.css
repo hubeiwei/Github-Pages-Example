@@ -339,58 +339,76 @@ a.external:hover {
     }
 }
 
-.article-body h1 {
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-}
-
-@media $mobiel {
-
-    .article-body h1 {
-        font-size: 24px;
-    }
-}
-
-.article-body h2 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-}
-
-@media $mobiel {
-
-    .article-body h2 {
-        font-size: 20px;
-    }
-}
-
-.article-body h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 25px;
-    color: #222;
-}
-
-@media screen and (max-width: 767px) {
-    .article-body h3 {
-        font-size: 16px;
-    }
-}
-
+.article-body h1,
+.article-body h2,
+.article-body h3,
 .article-body h4,
 .article-body h5,
 .article-body h6 {
-    color: #333;
+    margin-top: 1em;
+    margin-bottom: 16px;
     font-weight: bold;
-    margin-bottom: 15px;
+    line-height: 1.4;
 }
 
-.article-body p {
-    margin-bottom: 25px;
-    /*line-height: 1.8em;*/
+.article-body h1 {
+    padding-bottom: 0.3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+
+.article-body h2 {
+    padding-bottom: 0.3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+.article-body h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+
+.article-body h4 {
+    font-size: 1.25em;
+}
+
+.article-body h5 {
+    font-size: 1em;
+}
+
+.article-body h6 {
+    font-size: 1em;
+    color: #777;
+}
+
+.article-body p,
+.article-body blockquote,
+.article-body ul,
+.article-body ol,
+.article-body dl,
+.article-body table,
+.article-body pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.article-body ul, .article-body ol {
+    padding-left: 2em;
+}
+
+.article-body ul li, .article-body ol li {
+    margin-bottom: 5px;
+    line-height: 1.1em;
+}
+
+.article-body ul li {
+    list-style: disc;
+}
+
+.article-body ol li {
+    list-style: decimal;
 }
 
 .article-body code {
@@ -405,13 +423,12 @@ a.external:hover {
 
 .article-body pre {
     background: #f7f3f7;
-    padding: 20px 30px 15px;
+    padding: 20px 20px 15px;
     overflow: auto;
     margin-bottom: 40px;
     font-size: 14px;
     border: 1px solid #eee;
     color: #b9bdb6;
-    /*margin-top: -20px;*/
 }
 
 .article-body pre code {
@@ -421,48 +438,19 @@ a.external:hover {
     word-wrap: normal;
 }
 
-@media screen and (max-width: 767px) {
-    .article-body pre code {
-        line-height: 1em;
-        font-size: 12px;
-    }
+.article-body pre ol {
+    padding-left: 0;
 }
 
-.article-body h4 + pre,
-.article-body h3 + pre {
-    margin-top: 20px;
-}
-
-.article-body ul {
-    margin-bottom: 25px;
-    /*margin-left: 25px;*/
-}
-
-.article-body ul li {
-    margin-bottom: 5px;
-    list-style: disc;
-    line-height: 1.1em;
-}
-
-.article-body p + ul {
-    margin-top: -20px;
-}
-
-.article-body ol {
-    margin-bottom: 25px;
-    /*margin-left: 25px;*/
-}
-
-.article-body ol li {
-    margin-bottom: 5px;
-    list-style: decimal;
-    line-height: 1.1em;
+.article-body pre ol li {
+    list-style: none;
 }
 
 .article-body blockquote {
-    margin-left: 25px;
-    font-size: 14px;
-    font-style: italic;
+    padding: 0 15px;
+    color: #777;
+    border-left: 4px solid #ddd;
+    margin-left: 0;
 }
 
 .article-body img {
@@ -476,7 +464,6 @@ a.external:hover {
     width: 100%;
     overflow: auto;
     word-break: keep-all;
-    margin-bottom: 25px;
 }
 
 .article-body table th, .article-body table td {
