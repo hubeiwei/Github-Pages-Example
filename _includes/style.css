@@ -236,8 +236,17 @@ a.external:hover {
     }
 }
 
-.post-wrapper .post-title,
-.post-wrapper .post-title a {
+.post-head {
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 767px) {
+    .post-head {
+        margin-bottom: 40px;
+    }
+}
+
+.post-head h1 {
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 6px;
@@ -247,28 +256,15 @@ a.external:hover {
 }
 
 @media screen and (max-width: 767px) {
-    .post-wrapper .post-title,
-    .post-wrapper .post-title a {
+    .post-head h1 {
         font-size: 24px;
     }
 }
 
-.post-wrapper .post-title:hover,
-.post-wrapper .post-title a:hover {
-    text-decoration: none;
-}
-
-.post-wrapper .post-date {
+.post-head p {
     text-align: center;
     color: #999;
-    margin-bottom: 60px;
     font-size: 14px;
-}
-
-@media screen and (max-width: 767px) {
-    .post-wrapper .post-date {
-        margin-bottom: 40px;
-    }
 }
 
 .article-body {
