@@ -225,12 +225,12 @@ a.external:hover {
     width: 900px;
     margin: 0 auto;
     background: #fff;
-    padding: 80px 60px;
+    padding: 60px 40px;
 }
 
 @media screen and (max-width: 767px) {
     .post-wrapper {
-        width: 85%;
+        width: 90%;
         margin: 100px auto 50px;
         padding: 0;
     }
@@ -247,18 +247,11 @@ a.external:hover {
 }
 
 .post-head h1 {
-    font-size: 30px;
     font-weight: bold;
     margin-bottom: 6px;
     color: #000;
     text-align: center;
     word-wrap: break-word;
-}
-
-@media screen and (max-width: 767px) {
-    .post-head h1 {
-        font-size: 24px;
-    }
 }
 
 .post-head p {
