@@ -127,6 +127,28 @@ public static $builtInValidators = [
 ];
 ```
 
+也就是说，以下两种用法是等价的：
+
+```php
+use yii\validators\EmailValidator;
+ 
+public function rules()
+{
+    return [
+        [
+            ['email'],
+            'email',
+            'skipOnEmpty' => false,
+        ],
+        [
+            'email',
+            EmailValidator::className(),
+            'skipOnEmpty' => false,
+        ],
+    ];
+}
+```
+
 接下来，验证器属性就不用多说了吧？直接去看对应的类的属性就好了。
 
 ## Widget
