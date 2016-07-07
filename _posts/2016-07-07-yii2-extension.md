@@ -1,7 +1,7 @@
 ---
 layout: post
-title: yii2资源集
-description: 多学一点知识，少写几行代码
+title: yii2资源收集
+description: 多学一个知识，少写几行代码
 date: 2016-07-07 00:00:00
 category: blog
 ---
