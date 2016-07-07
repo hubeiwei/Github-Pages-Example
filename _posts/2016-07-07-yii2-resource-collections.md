@@ -10,6 +10,10 @@ yii2上有着大量扩展，加快了开发的速度，在此我也打算分享�
 
 在此向[forecho](https://github.com/forecho)的[awesome-yii2](https://github.com/forecho/awesome-yii2)致敬，他在yii2方面铺了很多的路。
 
+## 文档
+
+* [官方GitHub中文文档](https://github.com/yiisoft/yii2/tree/master/docs/guide-zh-CN)：如果你也有兴趣的话，就参与文档的翻译吧。
+
 ## kartik
 
 [kartik](https://github.com/kartik-v)为yii2贡献了大量既实用又强大的扩展，因此专门用一个标题向他们致敬以及分享一些我看过的扩展，官方DEMO地址[http://demos.krajee.com](http://demos.krajee.com)。
@@ -18,7 +22,7 @@ yii2上有着大量扩展，加快了开发的速度，在此我也打算分享�
 
 * [yii2-export](https://github.com/kartik-v/yii2-export)：因为grid的导出只能导出当前页的数据，先显示全部数据再导出的话对于成千上万条数据来说不现实，因此使用这个独立的导出插件是最好的办法，它可以导出全部页数据，配合grid可以达到“所搜即所导”的效果，只需配置`dataProvider`和`columns`属性即可，用法可以参考[这里](https://github.com/hubeiwei/laohu-yii2/blob/master/modules/core/helpers/RenderHelper.php#L82)，[文档](http://demos.krajee.com/export)。
 
-* [yii2-detail-view](https://github.com/kartik-v/yii2-detail-view)：不仅是显示详情，还带修改功能，[文档](http://demos.krajee.com/detail-view)，[DEMO](http://demos.krajee.com/detail-view-demo)。
+* [yii2-detail-view](https://github.com/kartik-v/yii2-detail-view)：DetailView强化版，不仅是显示详情，还带修改功能，[文档](http://demos.krajee.com/detail-view)，[DEMO](http://demos.krajee.com/detail-view-demo)。
 
 * [yii2-password](https://github.com/kartik-v/yii2-password)：可以显示密码的强度，也可以选择明文显示密码，附带一个密码验证器，有很丰富的验证功能，验证功能的中文注释可以看看[这里](https://github.com/hubeiwei/laohu-yii2/blob/master/modules/core/extensions/HuStrengthValidator.php)。
 
