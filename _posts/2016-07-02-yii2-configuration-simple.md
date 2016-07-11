@@ -10,9 +10,9 @@ category: blog
 
 **本文的定位是初学者**，写这篇文章，主要是想给初学者分享一下我所理解的yii2配置，以及分享一些`component`和`widget`等是如何配置的。
 
-配置在yii2中很常见，而且配置里还可以嵌套配置，在配置文件中的`$config`数组就能认为是对`Application`类的配置，数组里还能看到`component`和`module`的配置，但这还不是全部，在`model`、`controller`里的`actions`和`behaviors`以及`view`的`widget`都会用到配置。
+配置在yii2中很常见，而且配置里还可以嵌套配置，在配置文件中的`$config`数组就能认为是对`yii\web\Application`类进行配置，数组里还能看到`component`和`module`的配置，但这还不是全部，在`model`、`controller`里的`actions`和`behaviors`以及`view`的`widget`都会用到配置。
 
-对初学者来说，配置可以简单的认为是：配置某个类以及父类的**默认**`public`[属性](http://www.yiiframework.com/doc-2.0/guide-concept-configurations.html)。
+对初学者来说，配置可以简单的认为是：配置某个类以及父类的默认`public`[属性](http://www.yiiframework.com/doc-2.0/guide-concept-configurations.html)。
 
 看完下面基本格式后，结合上面这句话，去看看[我](https://github.com/hubeiwei/laohu-yii2)或者别人一些现成的代码（推荐用IDE），或许会有不小的收获，以下的示例代码仅供新人参考。
 
