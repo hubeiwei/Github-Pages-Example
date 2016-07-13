@@ -8,11 +8,11 @@ category: blog
 
 ## 前言
 
-**本文的定位是初学者**，写这篇文章，主要是想给初学者分享一下我所理解的yii2配置，以及分享一些`component`和`widget`等是如何配置的。
+**本文的定位是初学者**，写这篇文章，主要是想给初学者分享一下我所理解的yii2配置是什么意思，以及简单演示`rules`和`widget`的配置。
 
 配置在yii2中很常见，而且配置里还可以嵌套配置，在配置文件中的`$config`数组就能认为是对`yii\web\Application`类进行配置，数组里还能看到`component`和`module`的配置，但这还不是全部，在`model`、`controller`里的`actions`和`behaviors`以及`view`的`widget`都会用到配置。
 
-对初学者来说，配置可以简单的认为是：配置某个类以及父类的默认`public`[属性](http://www.yiiframework.com/doc-2.0/guide-concept-configurations.html)。
+对初学者来说，配置可以简单的认为是：配置某个类以及父类的默认`public`属性。
 
 看完下面基本格式后，结合上面这句话，去看看[我](https://github.com/hubeiwei/laohu-yii2)或者别人一些现成的代码（推荐用IDE），或许会有不小的收获，以下的示例代码仅供新人参考。
 
@@ -59,7 +59,7 @@ $config['components'] = [
 
 以上几个`component`的数组里，都能看到有声明`class`这个配置，为了规范，一般把`class`写在第一行，下面接着就是对这个`class`的属性进行配置。有些`class`甚至整个`component`我都加上了注释，因为以上都是框架本身的`component`，已经默认是注释里的配置了。
 
-另外，`actions`、`behaviors`的配置项也是这种形式，但到了入口文件之后的代码都支持了类加载，可以使用`Class::className()`来代替写死的字符串，方便以后用IDE重构类名（我觉得大型架构在配置方面能不用字符串就尽量不用字符串，尽量建多点对象来声明属性），这个方法封装在`yii\base\Object`里，yii2几乎所有类的父类最终都继承了该类，所以使用yii2以及其他为yii2开发的类时是可以调用到的，如果有疑问的话，可以看看IDE能不能提示这个方法就好。
+另外，到了入口文件之后的代码都支持了类加载，可以使用`Class::className()`来代替写死的字符串，方便以后用IDE重构自己的类名，这个方法封装在`yii\base\Object`里，很简单的一行代码，yii2几乎所有类的父类最终都继承了该类，所以使用yii2以及其他为yii2开发的类时是可以调用到的，如果有疑问的话，可以看看IDE能不能提示这个方法就好。
 
 ### 验证器
 
@@ -191,7 +191,7 @@ echo GridView::widget([
 ]);
 ```
 
-以上代码直接调用了`kartik\grid\GridView`，不需要再配置class，如果看过源码注释的话可以知道`columns`数组里的每一项默认class都是`kartik\grid\DataColumn`，所以默认是不需要配置class的，如果需要显示行号可以配置一个class为`kartik\grid\SerialColumn`的column，如果需要RUD按钮的话，则可以用`kartik\grid\ActionColumn`。
+以上代码直接调用了`kartik\grid\GridView`，不需要再配置class，如果看过源码注释的话可以知道`columns`数组里的每一项的默认class都是`kartik\grid\DataColumn`，所以默认是不需要配置class的（也就是注释掉的那些），如果需要显示行号可以配置一个class为`kartik\grid\SerialColumn`的column，如果需要view、按钮的话，则可以用`kartik\grid\ActionColumn`。
 
 #### ActionForm
 
@@ -243,7 +243,7 @@ echo $form->field($model, 'rememberMe', [
 ActiveForm::end();
 ```
 
-以上用了大量的配置项，但要注意了，有一些配置的是html属性，并不是类的属性，对这些还不熟的应该先去看这个方法的注释。
+以上用了大量的配置，但要注意了，有一些配置的是html属性，并不是类的属性，对这些还不熟的应该先去看这个方法的注释。
 
 `$form->field($model, 'attribute')->widget()`方法也很简单，第一个参数是类名，第二个参数就是配置，代码里演示了密码和验证码两个部件。
 
