@@ -360,7 +360,6 @@ a.external:hover {
     background: #f7f3f7;
     padding: 20px 20px 15px;
     overflow: auto;
-    font-size: 14px;
     border: 1px solid #eee;
     color: #b9bdb6;
 }
@@ -370,6 +369,7 @@ a.external:hover {
     border: none;
     padding: 0;
     word-wrap: normal;
+    font-size: 14px;
 }
 
 .article-body pre ol {
