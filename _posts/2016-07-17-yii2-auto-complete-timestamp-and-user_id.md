@@ -6,7 +6,7 @@ date: 2016-07-17 00:00:00
 category: blog
 ---
 
-我很懒，每次建完表之后都喜欢用gii生成model和CRUD代码，有些表简单到只需要很普通的输入，不需要对代码进行改动，很方便，如果遇到特殊一点的，可以直接用composer依赖一个widget，在表单简单修改一下，就OK，所以想偷懒一定要学会用gii和widget。
+我很懒，每次建完表之后都喜欢用gii生成model和CRUD代码，有些表简单到只需要很普通的输入，不需要对代码进行改动，很方便，如果遇到稍微特殊点的比如富文本编辑器，可以直接用composer依赖一个widget，在表单简单修改一下就OK了，所以想偷懒一定要学会用gii和widget。
 
 但有些字段是在后端完成的，例如添加修改时的时间戳和用户ID，可能你会想到在这个model添加和修改的地方加上`time()`和`Yii::$app->user->id`，但这太辛苦，只能解决当前问题，称不上偷懒，应该做的更彻底一些。
 
@@ -32,7 +32,7 @@ public function beforeSave($insert)
 }
 ```
 
-这应该是最简单的一个方法，但以后要是有其他需求在`beforeSave()`方法里加代码的话，代码混在一起，可能会搞得很乱，所以强烈建议看一下下面同样使用model来解决的方法：
+这应该是最简单的一个方法，但以后要是有其他需求在`beforeSave()`方法里加代码的话，代码混在一起，可能会搞得很乱，所以强烈建议使用下面的解决方法：
 
 ```php
 use yii\behaviors\BlameableBehavior;
@@ -80,8 +80,7 @@ public $updatedAtAttribute = 'updated_at';
  * will be used as value.
  */
 public $value;
-
-
+ 
 /**
  * @inheritdoc
  */
@@ -98,4 +97,4 @@ public function init()
 }
 ```
 
-需要补充的是，在执行`save()`方法的时候，会先进行验证，再触发`yii\db\BaseActiveRecord::EVENT_BEFORE_INSERT`和`yii\db\BaseActiveRecord::EVENT_BEFORE_UPDATE`两个事件，所以相关字段如果有非空的规则的话，`save()`方法是无法成功的，可以考虑取消相关字段的非空规则，或者如果你已经确认接收到的数据是安全的，可以把`save()`方法的第一个参数设置为`false`。
+需要补充的是，在执行`save()`方法的时候，会先进行验证，再触发`yii\db\BaseActiveRecord::EVENT_BEFORE_INSERT`和`yii\db\BaseActiveRecord::EVENT_BEFORE_UPDATE`两个事件，所以相关字段如果有非空的规则的话，`save()`方法是无法成功的，可以考虑取消相关字段的非空规则，或者，如果你已经确认接收到的数据是安全的，可以把`save()`方法的第一个参数设置为`false`。
