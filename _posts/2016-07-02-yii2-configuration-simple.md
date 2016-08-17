@@ -162,7 +162,7 @@ public function rules()
 
 如果看过源码注释的话可以知道`columns`数组里的每一项的默认class都是`kartik\grid\DataColumn`，所以默认是不需要配置class的（也就是注释掉的那些），如果需要显示行号可以配置一个class为`kartik\grid\SerialColumn`的column，如果需要一些操作按钮的话，则可以用`kartik\grid\ActionColumn`。
 
-`columns`数组里的很多项加上了`format`，如果我没猜错的话，能使用的`format`可以认为是`yii\i18n\Formatter`类里的所有asXx方法去掉as并开头小写，以下代码里我在每一个`format`上的注释指出了该格式对应的方法。有一些`format`为数组的，如果我没猜错的话，可以认为数组的第一个参数为格式，接着就是从对应asXx方法的第二个参数逐个开始配置（第一个参数为value不需要配置），起码我以下示例里的配置都成功了。
+`columns`数组里的很多项加上了`format`，如果我没猜错的话，能使用的`format`可以认为是`yii\i18n\Formatter`类里的所有asXx方法去掉as并开头小写，以下代码里我在每一个`format`上的注释指出了该格式对应的方法。如果留意一下文章开头`components`的配置，你会发现我为dateTime和date配置了格式，更多内容自行发掘。有一些`format`为数组的，如果我没猜错的话，可以认为数组的第一个参数为格式，接着就是从对应asXx方法的第二个参数逐个开始配置（第一个参数为value不需要配置），起码我以下示例里的配置都成功了。
 
 ```php
 use kartik\grid\ActionColumn;
