@@ -11,18 +11,26 @@ yii2是我接触过的几个框架里用PHPStorm来学习和开发体验最好�
 以user组件的identity（当前登录用户的实例，相当于findOne出来的类）以及第二个数据库组件（一般只有一个库时用默认的db最好因为底层已经有了PHPDoc）为例，配置如下：
 
 ```php
-'user' => [
-    'identityClass' => 'app\models\User',
-    'enableAutoLogin' => true,
-    'loginUrl' => ['/login'],
-],
-'db2' => [
-    'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=127.0.0.1;dbname=yii2basic',
-    'username' => 'root',
-    'password' => '123456',
-    'charset' => 'utf8',
-],
+return [
+    // ...
+    'components' => [
+        // ...
+        'user' => [
+            'identityClass' => 'app\models\User',
+            'enableAutoLogin' => true,
+            'loginUrl' => ['/login'],
+        ],
+        'db2' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=127.0.0.1;dbname=yii2basic',
+            'username' => 'root',
+            'password' => '123456',
+            'charset' => 'utf8',
+        ],
+        // ...
+    ],
+    // ...
+]
 ```
 
 ## 1.使用PHPDoc强行声明返回值的数据类型
@@ -74,7 +82,9 @@ class Helper
 
 ## 2.覆盖原有类
 
-这里说的覆盖不是去修改vendor目录里的代码，而是建立同名的类来达到代码提示的目的，这种方法对强迫症只有那么点副作用：
+这里说的覆盖不是去修改vendor目录里的代码，而是建立同名的类来达到代码提示的目的，Yii2的一个核心开发人员亚历山大给出了[解决方法](https://github.com/samdark/yii2-cookbook/blob/master/book/ide-autocompletion.md)，但感觉貌似有点复杂，以下我的代码是以自己的理解精简后的写出来的，同样不影响原有的代码提示。
+
+这种覆盖类的方法对强迫症只有那么点副作用：
 
 1. IDE提示同命名空间下的类名冲突了，右边滚动条处原本干干净净的突然就多出了一堆警告；
 
@@ -108,6 +118,8 @@ class User
 {
 }
 ```
+
+讲解：
 
 1. 首先我建立了一个`Yii`类，它有一个静态属性`$app`，声明数据类型为`MyApplication`。
 
