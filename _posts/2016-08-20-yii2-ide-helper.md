@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 让yii2自定义组件支持PHPStorm代码提示
-description: 让效率更上一层楼
+description: 让效率和准确性更上一层楼
 date: 2016-08-20 00:00:00
 category: blog
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 简单认识yii2配置
-description: 认识yii2常见套路
+description: 认识yii2常见套路，包含了rules、GridView（DataColumn和Formatter）、ActiveForm。
 date: 2016-07-02 00:00:00
 category: blog
 ---
