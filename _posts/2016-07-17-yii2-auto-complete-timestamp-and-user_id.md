@@ -56,30 +56,18 @@ public function behaviors()
 }
 ```
 
-在以上代码看出在model的`behaviors()`方法里添加了两个行为，它们的类分别是`yii\behaviors\BlameableBehavior`和`yii\behaviors\TimestampBehavior`，然后给它们进行了一些配置（如果你对配置不熟的话，不妨看看[这个](http://laohu321.cc/yii2-configuration-simple)）。
+在以上代码看出在model的`behaviors()`方法里添加了两个行为，第一个类`yii\behaviors\BlameableBehavior`是用来自动完成用户id字段的，第二个类`yii\behaviors\TimestampBehavior`是自动完成时间戳字段的，然后对它们进行了一些配置（如果你对配置不熟的话，不妨看看[这个](http://laohu321.cc/yii2-configuration-simple)）。
 
 `yii\behaviors\BlameableBehavior`类没有进行配置，这是为了告诉大家，这两个类其实是有默认配置的，所以这些默认配置如果和自己的需求符合的话，就可以直接添加类名，以下展示`yii\behaviors\TimestampBehavior`类的部分代码，另一个类的配置也是这样的，结合上面的示例，应该不用我进行什么讲解了。
 
 ```php
 use yii\db\BaseActiveRecord;
  
-/**
- * @var string the attribute that will receive timestamp value
- * Set this property to false if you do not want to record the creation time.
- */
-public $createdAtAttribute = 'created_at';
-/**
- * @var string the attribute that will receive timestamp value.
- * Set this property to false if you do not want to record the update time.
- */
-public $updatedAtAttribute = 'updated_at';
-/**
- * @inheritdoc
- *
- * In case, when the value is `null`, the result of the PHP function [time()](http://php.net/manual/en/function.time.php)
- * will be used as value.
- */
-public $value;
+public $createdAtAttribute = 'created_at';// 添加时间的字段
+
+public $updatedAtAttribute = 'updated_at';// 修改时间的字段
+
+public $value;// 自动补充的值，默认为time()函数
  
 /**
  * @inheritdoc
@@ -88,9 +76,12 @@ public function init()
 {
     parent::init();
 
+    // 未设置attributes时
     if (empty($this->attributes)) {
         $this->attributes = [
+            // 添加时自动完成添加和修改时间字段
             BaseActiveRecord::EVENT_BEFORE_INSERT => [$this->createdAtAttribute, $this->updatedAtAttribute],
+            // 修改时自动完成修改时间字段
             BaseActiveRecord::EVENT_BEFORE_UPDATE => $this->updatedAtAttribute,
         ];
     }
