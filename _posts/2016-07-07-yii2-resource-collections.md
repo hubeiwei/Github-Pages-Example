@@ -1,7 +1,7 @@
 ---
 layout: post
 title: yii2资源收集
-description: 少造点轮子
+description: 少造轮子
 date: 2016-07-07 00:00:00
 category: blog
 ---
@@ -16,7 +16,7 @@ yii2上有着大量扩展，加快了开发的速度，在此我也打算分享�
 
 ## kartik
 
-[kartik](https://github.com/kartik-v)为yii2贡献了大量既实用又强大的扩展，因此专门用一个标题向他们致敬，以及分享一些我看过的扩展，官方DEMO地址[http://demos.krajee.com](http://demos.krajee.com)。
+[kartik](https://github.com/kartik-v)为yii2贡献了大量既实用又强大的扩展，因此专门开一块来写以表致敬，以下都是我看过的扩展来，官方DEMO地址[http://demos.krajee.com](http://demos.krajee.com)。
 
 * [yii2-grid](https://github.com/kartik-v/yii2-grid)：GridView强化版，功能说不清，[文档](http://demos.krajee.com/grid)，[DEMO1](http://demos.krajee.com/grid-demo)，[DEMO2](http://demos.krajee.com/group-grid)。
 
@@ -26,9 +26,9 @@ yii2上有着大量扩展，加快了开发的速度，在此我也打算分享�
 
 * [yii2-password](https://github.com/kartik-v/yii2-password)：输入控件可以显示密码的强度，也可以选择明文显示密码，附带一个密码验证器，有很丰富的验证功能，输入控件[文档和DEMO](http://demos.krajee.com/password-details/password-input)，验证器[文档和DEMO](http://demos.krajee.com/password-details/strength-validator)，验证功能的中文注释可以看看[这里](https://github.com/hubeiwei/laohu-yii2/blob/master/modules/core/extensions/HuStrengthValidator.php)。
 
-* [yii2-date-range](https://github.com/kartik-v/yii2-date-range)：选择日期范围，建议用1.6.3版，后续版本貌似不支持24小时制，只能选择AM和PM，[文档](http://demos.krajee.com/date-range)，在grid上筛选日期的用法可以参考这里：1.[DataColumn](https://github.com/hubeiwei/laohu-yii2/blob/master/modules/portal/views/music/index.php#L76)，2.[DateRangePicker封装](https://github.com/hubeiwei/laohu-yii2/blob/master/modules/core/helpers/RenderHelper.php#L41)，3.[SearchModel](https://github.com/hubeiwei/laohu-yii2/blob/master/models/search/MusicSearch.php#L81)，4.[ActiveQuery](https://github.com/hubeiwei/laohu-yii2/blob/master/modules/core/extensions/HuActiveQuery.php#L64)。
+* [yii2-date-range](https://github.com/kartik-v/yii2-date-range)：单input选择日期范围，[文档](http://demos.krajee.com/date-range)，在grid上筛选日期的用法可以参考这里：1.[插件封装](https://github.com/hubeiwei/hello-yii2/blob/98c2c5ce1b92c9063495278d1fdde901054fdfc5/modules/core/widget/DateRangePicker.php)，2.[DataColumn的filterType和filterWidgetOptions](https://github.com/hubeiwei/hello-yii2/blob/98c2c5ce1b92c9063495278d1fdde901054fdfc5/modules/frontend/views/music/index.php#L44)，3.[SearchModel](https://github.com/hubeiwei/hello-yii2/blob/05a5aa6fb28b2cb8cae8bec294d3c16aae1d105d/models/search/MusicSearch.php#L107)，4.[ActiveQuery](https://github.com/hubeiwei/hello-yii2/blob/d906aa8ea429f13ea50c6fadd198dbcd1144560a/modules/core/extensions/HuActiveQuery.php#L63)。
 
-### yii2-widgets
+### kartik-yii2-widgets
 
 [yii2-widgets](https://github.com/kartik-v/yii2-widgets)里集成了大量的widget，真心不错，建议花时间看一遍demo，这里单独拿几个我觉得不错的出来分享：
 
