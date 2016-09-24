@@ -8,7 +8,7 @@ category: blog
 
 yii2是我接触过的几个框架里用PHPStorm来学习和开发体验最好的一个，yii2几乎所有代码都支持了IDE的提示，这得益于开发者们在底层内置了大量PHPDoc的缘故，但是对于一些自定义的components比如`Yii::$app->myComponent->something`, IDE的提示就无能为力了，这对于追求开发效率和准确性的程序员来说是非常不能忍的事情，但也不是完全没有办法解决这个问题的，以下教大家两种方法。
 
-以user组件的identity（当前登录用户的实例，相当于findOne出来的类）以及第二个数据库组件（一般只有一个库时用默认的db最好因为底层已经有了PHPDoc）为例，配置如下：
+以user组件的identity（当前登录用户的实例，相当于findOne出来的类）以及第二个数据库组件（一般只有一个库时用默认的db最好因为底层已经有了PHPDoc）为例，配置大概如下：
 
 ```php
 return [
@@ -17,15 +17,14 @@ return [
         // ...
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
-            'loginUrl' => ['/login'],
+            // ...
         ],
         'db2' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=127.0.0.1;dbname=yii2basic',
-            'username' => 'root',
-            'password' => '123456',
-            'charset' => 'utf8',
+            // 'dsn' => '',
+            // 'username' => '',
+            // 'password' => '',
+            // 'charset' => '',
         ],
         // ...
     ],
