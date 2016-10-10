@@ -70,7 +70,7 @@ yii2上有着大量扩展，加快了开发的速度，在此我也打算分享�
 
 ## gii模版
 
-* [warrence/yii2-kartikgii](https://github.com/warrence/yii2-kartikgii)：顾名思义，这套模板可以帮你生成kartik/grid的CRUD代码，具体还是自己看吧。
+* [warrence/yii2-kartikgii](https://github.com/warrence/yii2-kartikgii)：这套模板生成的CRUD代码用到了很多kartik的widget，可以用来参考一些widget的用法，具体还是自己看吧。
 
 * [mootensai/yii2-enhanced-gii](https://github.com/mootensai/yii2-enhanced-gii)：这套模板生成model可以配置添加修改时自动填充的时间和用户字段，其他功能还是自己看吧。
 
