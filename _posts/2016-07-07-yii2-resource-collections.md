@@ -28,7 +28,7 @@ yii2上有着大量扩展，加快了开发的速度，在此我也打算分享�
 
 * [yii2-date-range](https://github.com/kartik-v/yii2-date-range)：单input选择日期范围，[文档](http://demos.krajee.com/date-range)，在grid上筛选日期的用法可以参考这里：1.[插件封装](https://github.com/hubeiwei/hello-yii2/blob/98c2c5ce1b92c9063495278d1fdde901054fdfc5/modules/core/widget/DateRangePicker.php)，2.[DataColumn的filterType和filterWidgetOptions](https://github.com/hubeiwei/hello-yii2/blob/98c2c5ce1b92c9063495278d1fdde901054fdfc5/modules/frontend/views/music/index.php#L44)，3.[SearchModel](https://github.com/hubeiwei/hello-yii2/blob/05a5aa6fb28b2cb8cae8bec294d3c16aae1d105d/models/search/MusicSearch.php#L107)，4.[ActiveQuery](https://github.com/hubeiwei/hello-yii2/blob/d906aa8ea429f13ea50c6fadd198dbcd1144560a/modules/core/extensions/HuActiveQuery.php#L63)。
 
-### kartik-yii2-widgets
+### kartik-v/yii2-widgets
 
 [yii2-widgets](https://github.com/kartik-v/yii2-widgets)里集成了大量的widget，真心不错，建议花时间看一遍demo，这里单独拿几个我觉得不错的出来分享：
 
