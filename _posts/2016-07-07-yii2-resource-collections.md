@@ -16,7 +16,7 @@ yii2上有着大量扩展，加快了开发的速度，在此我也打算分享�
 
 ## kartik
 
-[kartik](https://github.com/kartik-v)为yii2贡献了大量既实用又强大的扩展，因此专门开一块来写以表致敬，以下都是我看过的扩展来，官方DEMO地址[http://demos.krajee.com](http://demos.krajee.com)。
+[kartik](https://github.com/kartik-v)为yii2贡献了大量既实用又强大的扩展，因此专门开一块来写以表致敬，以下都是我看过的扩展，官方DEMO地址[http://demos.krajee.com](http://demos.krajee.com)。
 
 * [yii2-grid](https://github.com/kartik-v/yii2-grid)：GridView强化版，功能说不清，[文档](http://demos.krajee.com/grid)，[DEMO1](http://demos.krajee.com/grid-demo)，[DEMO2](http://demos.krajee.com/group-grid)。
 
