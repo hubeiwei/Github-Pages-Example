@@ -84,6 +84,6 @@ yii2上有着大量扩展，加快了开发的速度，在此我也打算分享�
 
 以上还有很多扩展还在学习中，如果你对我分享的内容有兴趣的话，可以向我打赏，让我更有动力去写这些扩展的教程。
 
-![alipay](https://raw.githubusercontent.com/hubeiwei/hello-yii2/master/web/ali_pay.jpg "支付宝")
+![alipay](https://raw.githubusercontent.com/hubeiwei/hubeiwei.github.io/master/images/pay/ali_pay.jpg "支付宝")
 
-![wechat](https://raw.githubusercontent.com/hubeiwei/hello-yii2/master/web/wechat_pay.png "微信")
+![wechat](https://raw.githubusercontent.com/hubeiwei/hubeiwei.github.io/master/images/pay/wechat_pay.png "微信")
