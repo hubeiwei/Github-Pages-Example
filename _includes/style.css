@@ -350,7 +350,7 @@ a.external:hover {
     word-wrap: break-word;
 }
 
-.article-body code::before, .article-body code::after {
+/*.article-body code::before, .article-body code::after {
     letter-spacing: -0.2em;
     content: "\00a0";
 }
@@ -358,7 +358,7 @@ a.external:hover {
 .article-body code::before, .article-body code::after {
     letter-spacing: -0.2em;
     content: "\00a0";
-}
+}*/
 
 .article-body pre {
     background: #f7f3f7;
