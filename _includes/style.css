@@ -350,16 +350,6 @@ a.external:hover {
     word-wrap: break-word;
 }
 
-/*.article-body code::before, .article-body code::after {
-    letter-spacing: -0.2em;
-    content: "\00a0";
-}
-
-.article-body code::before, .article-body code::after {
-    letter-spacing: -0.2em;
-    content: "\00a0";
-}*/
-
 .article-body pre {
     background: #f7f3f7;
     padding: 20px 20px 15px;
@@ -374,14 +364,6 @@ a.external:hover {
     padding: 0;
     word-wrap: normal;
     font-size: 14px;
-}
-
-.article-body pre ol {
-    padding-left: 0;
-}
-
-.article-body pre ol li {
-    list-style: none;
 }
 
 .article-body blockquote {
