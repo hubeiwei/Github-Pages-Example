@@ -340,6 +340,32 @@ a.external:hover {
     list-style: decimal;
 }
 
+.article-body code {
+    padding: 0.2em 0;
+    margin: 0;
+    font-size: 85%;
+    background: #eee;
+    border-radius: 3px;
+    font-family: "Courier";
+    word-wrap: break-word;
+}
+
+.article-body pre {
+    background: #f7f3f7;
+    padding: 20px 20px 15px;
+    overflow: auto;
+    border: 1px solid #eee;
+    color: #b9bdb6;
+}
+
+.article-body pre code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    word-wrap: normal;
+    font-size: 14px;
+}
+
 .article-body blockquote {
     padding: 0 15px;
     color: #777;
