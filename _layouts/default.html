@@ -2,14 +2,15 @@
 <html lang="zh-cmn-Hans">
 <head>
     <meta charset="utf-8"/>
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="author" content="hubeiwei"/>
-    <meta name="renderer" content="webkit">
-    <meta name="description" content="hubeiwei's Blog"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="author" content="hubeiwei"/>
+    <meta name="description" content="hubeiwei's Blog"/>
+    <meta name="renderer" content="webkit">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <!--<style>{% include style.css %}</style>-->
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/highlightjs/styles/solarized-light.css">
-    <style>{% include style.css %}</style>
 </head>
 {{ content }}
 </html>
