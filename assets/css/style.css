@@ -340,6 +340,10 @@ a.external:hover {
     list-style: decimal;
 }
 
+code, kbd, pre, samp {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
 .article-body code {
     padding: 2px 4px;
     font-size: 90%;
