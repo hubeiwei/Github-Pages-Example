@@ -62,11 +62,13 @@
     word-break: break-all;
 }
 
-.article-body ul, .article-body ol {
+.article-body ul,
+.article-body ol {
     padding-left: 2em;
 }
 
-.article-body ul li, .article-body ol li {
+.article-body ul li,
+.article-body ol li {
     margin-bottom: 5px;
 }
 
@@ -98,9 +100,11 @@
     word-break: keep-all;
 }
 
-.article-body table th, .article-body table td {
+.article-body table th,
+.article-body table td {
     padding: 6px 13px;
     border: 1px solid #ddd;
+    white-space: nowrap;
 }
 
 .article-body table th {
@@ -116,7 +120,10 @@
     background-color: #f8f8f8;
 }
 
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
