@@ -91,28 +91,20 @@ code, kbd, pre, samp {
 }
 
 .article-body pre {
-    display: block;
-    padding: 9.5px;
-    margin: 0 0 10px;
-    font-size: 13px;
-    line-height: 1.42857143;
-    color: #333;
-    word-break: break-all;
-    word-wrap: break-word;
+    padding: 20px;
     background-color: #f5f5f5;
+    color: #b9bdb6;
     border: 1px solid #ccc;
     border-radius: 4px;
-
     overflow: auto;
 }
 
 .article-body pre code {
-    padding: 0;
-    font-size: inherit;
-    color: inherit;
-    white-space: pre-wrap;
     background-color: transparent;
-    border-radius: 0;
+    border: none;
+    padding: 0;
+    word-wrap: normal;
+    font-size: 14px;
 }
 
 .article-body blockquote {
