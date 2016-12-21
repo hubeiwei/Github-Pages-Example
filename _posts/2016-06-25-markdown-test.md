@@ -88,7 +88,7 @@ class world
     }
 }
 
-echo hello\world::helloWorld(self::$helloWorld);
+echo hello\world::helloWorld(hello\world::$helloWorld);
 ```
 
 # 表格
