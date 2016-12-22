@@ -69,14 +69,14 @@ public function rules()
             '验证器名或完整类名',
             '验证器属性1',
             '验证器属性2',
-            ...
+            // ...
         ],
         [
             '属性',
             '验证器名或完整类名',
             '验证器属性1',
             '验证器属性2',
-            ...
+            // ...
         ],
     ];
 }
@@ -102,8 +102,6 @@ public static $builtInValidators = [
 也就是说，以下两种用法是等价的：
 
 ```php
-use yii\validators\EmailValidator;
- 
 public function rules()
 {
     return [
@@ -114,7 +112,7 @@ public function rules()
         ],
         [
             'email',
-            EmailValidator::className(),
+            \yii\validators\EmailValidator::className(),
             'skipOnEmpty' => false,
         ],
     ];
@@ -159,4 +157,4 @@ echo GridView::widget([
 ]);
 ```
 
-如果看过源码的话可以知道`columns`里的每一项默认`class`都是`kartik\grid\DataColumn`，所以默认是不需要配置`class`的（也就是注释掉的那些），如果需要显示行号可以配置一个`class`为`kartik\grid\SerialColumn`的column，如果需要一些操作按钮的话，则可以用`kartik\grid\ActionColumn`。
+如果看过源码的话可以知道`columns`里的每一项默认`class`都是`kartik\grid\DataColumn`，所以默认是不需要配置`class`的，如果需要显示行号可以配置一个`class`为`kartik\grid\SerialColumn`的column，如果需要一些操作按钮的话，则可以用`kartik\grid\ActionColumn`。
