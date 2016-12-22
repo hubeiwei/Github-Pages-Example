@@ -1,8 +1,8 @@
 permalink: /:year/:month/:title
 
 title: laohu321.cc
+description: hubeiwei's Blog
 url: http://laohu321.cc
-author_info: <a href="http://laohu321.cc/">hubeiwei</a>
 
 markdown: kramdown
 kramdown:
