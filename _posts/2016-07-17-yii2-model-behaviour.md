@@ -3,7 +3,8 @@ layout: post
 title: yii2自动填充字段
 description: 让偷懒更上一层楼
 date: 2016-07-17 00:00:00
-category: blog
+category: yii2
+tags: yii2
 ---
 
 我很懒，每次建完表之后都喜欢用gii生成model和CRUD代码，有些表简单到只需要很普通的输入，不需要对代码进行改动，很方便，如果遇到稍微特殊点的比如富文本编辑器，可以直接找一个widget，在表单简单修改一下就OK了，所以想偷懒一定要学会用gii和widget。

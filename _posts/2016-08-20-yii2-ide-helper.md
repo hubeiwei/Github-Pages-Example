@@ -3,7 +3,8 @@ layout: post
 title: 让yii2自定义组件支持PHPStorm代码提示
 description: 让效率和准确性更上一层楼
 date: 2016-08-20 00:00:00
-category: blog
+category: yii2
+tags: yii2
 ---
 
 yii2是我接触过的几个框架里用PHPStorm来学习和开发体验最好的一个，yii2几乎所有代码都支持了IDE的提示，这得益于开发者们在底层内置了大量PHPDoc的缘故，但是对于一些自定义的components比如`Yii::$app->myComponent->something`, IDE的提示就无能为力了，这对于追求开发效率和准确性的程序员来说是非常不能忍的事情，但也不是完全没有办法解决这个问题的，以下教大家两种方法。

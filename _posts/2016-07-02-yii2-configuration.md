@@ -3,16 +3,17 @@ layout: post
 title: 认识yii2配置
 description: 认识yii2常见套路
 date: 2016-07-02 00:00:00
-category: blog
+category: yii2
+tags: yii2
 ---
 
 ## 前言
 
 **本文的定位是初学者**，写这篇文章，主要是想给初学者分享一下我所理解的yii2配置是什么意思。
 
-一句话贯穿全文：配置可以简单的认为是：配置某个类以及父类的默认属性。
+一句话：配置可以简单的认为是配置某个类以及父类的默认属性。
 
-配置在yii2中很常见，入口文件里`(new yii\web\Application($config))->run()`中的`$config`，就是对`yii\web\Application`类的属性进行配置，配置里还可以嵌套配置，比如`$config['component']`和`$config['module']`。
+配置在yii2中很常见，入口文件里`(new yii\web\Application($config))->run()`中的`$config`，就是对`yii\web\Application`类的属性进行配置，有些配置里还会有配置，比如`$config['component']`和`$config['module']`，所以要养成用IDE看源码注释的习惯。
 
 看完下面的一些示例后，结合上面这句话，去看别人一些现成代码的时候或许收获会更大。
 
@@ -53,7 +54,7 @@ $config['components'] = [
 
 当然有些核心组件是不需要配置`class`的，详情可以看`yii\web\Application::coreComponents()`以及`yii\base\Application::coreComponents()`。
 
-如果你觉得用字符串写类名麻烦，可以使用`Class::className()`来代替写死的字符串，详情请看`yii\base\Object::className()`，这样还方便以后用IDE的find usages、rename、跳转，基本上框架和第三方为yii2开发的类，只要继承了`yii\base\Object`都可以使用`className()`方法。
+如果你觉得用字符串写类名麻烦，可以使用`Class::className()`来代替写死的字符串，详情请看`yii\base\Object::className()`，这样还方便以后用IDE的find usages、rename、跳转，基本上框架和第三方为yii2开发的类都继承了`yii\base\Object`。
 
 ### 验证器
 
