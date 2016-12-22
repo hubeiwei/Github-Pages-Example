@@ -292,8 +292,9 @@ a.external:hover {
     margin-bottom: 20px;
 }
 
-.about-wrapper .aboutme h2 a {
+.about-wrapper .aboutme h2 span {
     font-size: 18px;
+    color: #fff;
 }
 
 .about-wrapper .aboutme li {
