@@ -159,4 +159,4 @@ echo GridView::widget([
 ]);
 ```
 
-如果看过源码的话可以知道`columns`里的每一项默认`class`都是`kartik\grid\DataColumn`，所以默认是不需要配置`class`的（也就是注释掉的那些），如果需要显示行号可以配置一个class为`kartik\grid\SerialColumn`的column，如果需要一些操作按钮的话，则可以用`kartik\grid\ActionColumn`。
+如果看过源码的话可以知道`columns`里的每一项默认`class`都是`kartik\grid\DataColumn`，所以默认是不需要配置`class`的（也就是注释掉的那些），如果需要显示行号可以配置一个`class`为`kartik\grid\SerialColumn`的column，如果需要一些操作按钮的话，则可以用`kartik\grid\ActionColumn`。
