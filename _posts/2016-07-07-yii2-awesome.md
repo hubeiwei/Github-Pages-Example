@@ -21,13 +21,13 @@ yii2上有着大量扩展，加快了开发的速度，在此我也打算分享�
 
 * [yii2-grid](https://github.com/kartik-v/yii2-grid)：GridView强化版，功能说不清，[文档](http://demos.krajee.com/grid)，[DEMO1](http://demos.krajee.com/grid-demo)，[DEMO2](http://demos.krajee.com/group-grid)。
 
-* [yii2-export](https://github.com/kartik-v/yii2-export)：因为grid的导出只能导出当前页的数据，先显示全部数据再导出的话对于成千上万条数据来说不现实，因此使用这个独立的导出插件是最好的办法，它可以导出全部页数据，配合grid可以达到“所搜即所导”的效果，只需配置`dataProvider`和`columns`属性即可，用法可以参考[这里](https://github.com/hubeiwei/laohu-yii2/blob/master/modules/core/helpers/RenderHelper.php#L82)，[文档](http://demos.krajee.com/export)。
+* [yii2-export](https://github.com/kartik-v/yii2-export)：因为grid的导出只能导出当前页的数据，先显示全部数据再导出的话对于成千上万条数据来说不现实，因此使用这个独立的导出插件是最好的办法，它可以导出全部页数据，配合grid可以达到“所搜即所导”的效果，只需配置`dataProvider`和`columns`属性即可，用法可以参考[这里](https://github.com/hubeiwei/laohu-yii2/blob/master/common/helpers/RenderHelper.php#L61)，[文档](http://demos.krajee.com/export)。
 
 * [yii2-detail-view](https://github.com/kartik-v/yii2-detail-view)：DetailView强化版，不仅是显示详情，还带修改功能，[文档](http://demos.krajee.com/detail-view)，[DEMO](http://demos.krajee.com/detail-view-demo)。
 
-* [yii2-password](https://github.com/kartik-v/yii2-password)：输入控件可以显示密码的强度，也可以选择明文显示密码，附带一个密码验证器，有很丰富的验证功能，输入控件[文档和DEMO](http://demos.krajee.com/password-details/password-input)，验证器[文档和DEMO](http://demos.krajee.com/password-details/strength-validator)，验证功能的中文注释可以看看[这里](https://github.com/hubeiwei/laohu-yii2/blob/master/modules/core/extensions/HuStrengthValidator.php)。
+* [yii2-password](https://github.com/kartik-v/yii2-password)：输入控件可以显示密码的强度，也可以选择明文显示密码，附带一个密码验证器，有很丰富的验证功能，输入控件[文档和DEMO](http://demos.krajee.com/password-details/password-input)，验证器[文档和DEMO](http://demos.krajee.com/password-details/strength-validator)，验证功能的中文注释可以看看[我的](https://github.com/hubeiwei/hello-yii2/blob/master/common/extensions/StrengthValidator.php)。
 
-* [yii2-date-range](https://github.com/kartik-v/yii2-date-range)：单input选择日期范围，[文档](http://demos.krajee.com/date-range)，在grid上筛选日期的用法可以参考这里：1.[插件封装](https://github.com/hubeiwei/hello-yii2/blob/98c2c5ce1b92c9063495278d1fdde901054fdfc5/modules/core/widget/DateRangePicker.php)，2.[DataColumn的filterType和filterWidgetOptions](https://github.com/hubeiwei/hello-yii2/blob/98c2c5ce1b92c9063495278d1fdde901054fdfc5/modules/frontend/views/music/index.php#L44)，3.[SearchModel](https://github.com/hubeiwei/hello-yii2/blob/05a5aa6fb28b2cb8cae8bec294d3c16aae1d105d/models/search/MusicSearch.php#L107)，4.[ActiveQuery](https://github.com/hubeiwei/hello-yii2/blob/d906aa8ea429f13ea50c6fadd198dbcd1144560a/modules/core/extensions/HuActiveQuery.php#L63)。
+* [yii2-date-range](https://github.com/kartik-v/yii2-date-range)：选择日期范围，[文档](http://demos.krajee.com/date-range)，在grid上筛选日期的用法可以参考我的：1.[插件继承](https://github.com/hubeiwei/hello-yii2/blob/master/common/widgets/DateRangePicker.php)，2.[DataColumn的filterType和filterWidgetOptions](https://github.com/hubeiwei/hello-yii2/blob/master/modules/backend/views/user-detail/index.php#L49)，3.[SearchModel](https://github.com/hubeiwei/hello-yii2/blob/master/models/search/UserDetailSearch.php#L96)，4.[ActiveQuery继承](https://github.com/hubeiwei/hello-yii2/blob/master/common/extensions/ActiveQuery.php#L63)。
 
 ### kartik-v/yii2-widgets
 
@@ -41,9 +41,9 @@ yii2上有着大量扩展，加快了开发的速度，在此我也打算分享�
 
 * [yii2-widget-growl](https://github.com/kartik-v/yii2-widget-growl)：消息提示，可以自定义在页面6个方向的位置显示，效果不错而且不影响布局，[文档和DEMO](http://demos.krajee.com/widget-details/growl)。
 
-* [yii2-widget-typeahead](https://github.com/kartik-v/yii2-widget-typeahead)：文本框输入时能在下方出现提示，感觉不够模糊，不适用于搜索，一般只能用于密保问题之类的，[文档和DEMO](http://demos.krajee.com/widget-details/typeahead)。
+* [yii2-widget-select2](https://github.com/kartik-v/yii2-widget-select2)：功能挺丰富的下拉框，[文档和DEMO](http://demos.krajee.com/widget-details/select2)。
 
-* [yii2-widget-select2](https://github.com/kartik-v/yii2-widget-select2)：可以理解成带搜索功能的select下拉框，[文档和DEMO](http://demos.krajee.com/widget-details/select2)。
+* [yii2-widget-typeahead](https://github.com/kartik-v/yii2-widget-typeahead)：文本框输入时能在下方出现提示，感觉不够模糊，不适用于搜索，一般只能用于密保问题之类的，[文档和DEMO](http://demos.krajee.com/widget-details/typeahead)。
 
 ## Widget
 
@@ -55,11 +55,9 @@ yii2上有着大量扩展，加快了开发的速度，在此我也打算分享�
 
 * [wbraganca/yii2-dynamicform](https://github.com/wbraganca/yii2-dynamicform)：动态批量添加修改，[DEMO1](http://wbraganca.com/yii2extensions/dynamicform-demo1/)，[DEMO2](http://wbraganca.com/yii2extensions/dynamicform-demo2/)，[DEMO3](http://wbraganca.com/yii2extensions/dynamicform-demo3/)，更多wbraganca的扩展请看[这里](https://github.com/wbraganca)。
 
-* [wbraganca/yii2-selectivity](https://github.com/wbraganca/yii2-selectivity)：用来选择分类的扩展，提供两种方式，但好像只能选择已有的，不能自行输入，[DEMO](http://wbraganca.com/yii2extensions/yii2-selectivity/usage)。
-
 ## Module
 
-* [mdmsoft/yii2-admin](https://github.com/mdmsoft/yii2-admin)：该模块提供了编辑yii2的RBAC表的页面，还附带动态菜单，强烈推荐，[mdmsoft](https://github.com/mdmsoft)还有挺多yii2扩展，可以去看看。
+* [mdmsoft/yii2-admin](https://github.com/mdmsoft/yii2-admin)：该模块提供了编辑yii2的RBAC表的页面，还附带动态菜单，需求简单的推荐用这个，[mdmsoft](https://github.com/mdmsoft)还有挺多yii2扩展，可以去看看。
 
 ## 图表
 
@@ -78,8 +76,6 @@ yii2上有着大量扩展，加快了开发的速度，在此我也打算分享�
 ## 网站
 
 * [Get√Yii](https://github.com/iiYii/getyii)
-
-* [iiSNS](https://github.com/shi-yang/iisns)
 
 ## 结束语
 
