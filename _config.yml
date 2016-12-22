@@ -1,4 +1,4 @@
-permalink: /:title
+permalink: /:year/:month/:title
 
 title: laohu321.cc
 url: http://laohu321.cc
