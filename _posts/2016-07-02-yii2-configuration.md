@@ -13,7 +13,9 @@ tags: yii2
 
 一句话：配置可以简单的认为是配置某个类以及父类的默认属性。
 
-配置在yii2中很常见，入口文件里`(new yii\web\Application($config))->run()`中的`$config`，就是对`yii\web\Application`类的属性进行配置，有些配置里还会有配置，比如`$config['component']`和`$config['module']`，所以要养成用IDE看源码注释的习惯。
+配置在yii2中很常见，入口文件里`(new yii\web\Application($config))->run()`中的`$config`，就是对`yii\web\Application`类的属性进行配置，有些配置里还会有配置，比如`$config['component']`和`$config['module']`。
+
+不论怎么说，一定要要养成用IDE看源码有哪些属性和方法以及注释的习惯，几乎可以说yii2有一半代码都是注释，我也是这样才懂得快速上手各种yii2相关类的。
 
 看完下面的一些示例后，结合上面这句话，去看别人一些现成代码的时候或许收获会更大。
 
