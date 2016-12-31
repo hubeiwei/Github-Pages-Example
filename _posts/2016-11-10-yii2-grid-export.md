@@ -11,7 +11,11 @@ GridView改用功能更强大的[kartik-v/yii2-grid](https://github.com/kartik-v
 
 导出使用[kartik-v/yii2-export](https://github.com/kartik-v/yii2-export)，这个类的父类就是以上的`kartik-v/yii2-grid`。
 
-控制器和searchModel的代码和[这篇文章]({% post_url 2016-11-02-yii2-grid %})里的基本一样，区别在于视图里，传递给GridView的columns需要共享给ExportMenu，做到“所见即所得”的效果，当然你为了自定义一些内容，也可以分开写，视图代码如下：
+控制器和searchModel的代码和[这篇文章]({% post_url 2016-11-02-yii2-grid %})里的基本一样，区别在于视图里：
+
+1. `kartik\grid\GridView::$export`需要设置为`false`，否则会报错提醒你下载mpdf包，这个包的大小为100M，而且`kartik\grid\GridView`本身的导出只能导出当前页，你需要显示所有数据才能导出所有，页面的数据达到几千条就很卡了，不合理，所以最好的做法就是禁用掉它。
+
+2. 传递给GridView的columns需要共享给ExportMenu，做到“所见即所得”的效果，当然你为了自定义一些内容，也可以分开写，视图代码如下：
 
 ```php
 use kartik\export\ExportMenu;
@@ -37,5 +41,6 @@ echo GridView::widget([
     'filterModel' => $searchModel,
     'dataProvider' => $dataProvider,
     'columns' => $gridColumns,
+    'export' => false,
 ]);
 ```
