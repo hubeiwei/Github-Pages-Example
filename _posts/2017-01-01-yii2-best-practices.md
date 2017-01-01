@@ -29,7 +29,9 @@ tags: yii2
 
 ## 网站搭建的正确姿势
 
-很多新人都喜欢在windows上用集成环境，把项目直接丢到www目录里运行，这种习惯很明显是不对的，路由用框架的方法生成还好，但前端资源的加载可能会遇到各种路径的问题，在开发时应该让环境尽可能的接近生产环境，正确的姿势应该是搭建vhost，**以每一个网站的web目录为域名的根目录**，你可以google或者参考官方的[文档](https://github.com/yiisoft/yii2/blob/master/docs/guide-zh-CN/start-installation.md#配置-web-服务器-)，nginx也可以看[这篇文章](http://www.getyii.com/topic/31)。
+很多新人都喜欢在windows上用集成环境，把项目直接丢到www目录里运行，这种习惯很明显是不对的，路由用框架的方法生成还好，但前端资源的加载可能会遇到各种路径的问题，在开发时应该让环境尽可能的接近生产环境，正确的姿势应该是搭建vhost，**以每一个网站的web目录为域名的根目录**，有些用高级模板的新人用一个域名指向项目根目录也是不对的，高级模板里有多少个网站，就要配多少个域名，最好是能够开启url美化以及隐藏脚本文件名，这样的url看起来非常简洁。
+
+具体配置vhost方法你可以google或者参考官方的[文档](https://github.com/yiisoft/yii2/blob/master/docs/guide-zh-CN/start-installation.md#配置-web-服务器-)，nginx也可以看[这篇文章](http://www.getyii.com/topic/31)。
 
 ## PHPStorm
 
