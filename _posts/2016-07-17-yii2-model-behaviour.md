@@ -1,6 +1,6 @@
 ---
 layout: post
-title: yii2自动填充字段
+title: yii2 自动填充字段
 description: 让偷懒更上一层楼
 date: 2016-07-17 00:00:00
 category: yii2
