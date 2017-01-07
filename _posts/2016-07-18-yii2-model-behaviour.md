@@ -2,7 +2,7 @@
 layout: post
 title: yii2 自动填充字段
 description: 让偷懒更上一层楼
-date: 2016-07-17 00:00:00
+date: 2016-07-18 01:37:00 +0800
 category: yii2
 tags: yii2
 ---

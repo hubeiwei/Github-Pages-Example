@@ -2,7 +2,7 @@
 layout: post
 title: 让 yii2 自定义组件支持 PHPStorm 代码提示
 description: 让效率和准确性更上一层楼
-date: 2016-08-20 00:00:00
+date: 2016-08-20 10:25:00 +0800
 category: yii2
 tags: yii2
 ---

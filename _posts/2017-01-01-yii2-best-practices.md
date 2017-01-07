@@ -2,7 +2,7 @@
 layout: post
 title: 个人 yii2 最佳实践
 description: 分享一些人生的经验，持续更新中
-date: 2017-01-01 00:00:00
+date: 2017-01-01 02:59:00 +0800
 category: yii2
 tags: yii2
 ---
@@ -65,7 +65,7 @@ tags: yii2
 
 ## 框架基本套路
 
-yii2 的基本套路，就是配置，你可以在配置里随意指定你要用的类，具体在[这篇文章]({% post_url 2016-07-02-yii2-configuration %})内。
+yii2 的基本套路，就是配置，你可以在配置里随意指定你要用的类，具体在[这篇文章]({% post_url 2016-07-05-yii2-configuration %})内。
 
 上面介绍了 PHPStorm 这个 IDE，就是为了能让你认识 yii2 的基本套路后，可以更快速的找代码。
 

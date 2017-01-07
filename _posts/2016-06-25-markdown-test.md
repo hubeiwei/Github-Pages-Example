@@ -2,7 +2,7 @@
 layout: post
 title: 常用 Markdown 样式测试
 description: 写一些常用的 Markdown 语法以便调整样式
-date: 2016-06-25 00:00:00
+date: 2016-06-25 04:49:00 +0800
 tags: markdown
 ---
 

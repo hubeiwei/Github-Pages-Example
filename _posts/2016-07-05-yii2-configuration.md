@@ -2,7 +2,7 @@
 layout: post
 title: 认识 yii2 配置
 description: 认识 yii2 常见套路
-date: 2016-07-02 00:00:00
+date: 2016-07-05 15:49:00 +0800
 category: yii2
 tags: yii2
 ---

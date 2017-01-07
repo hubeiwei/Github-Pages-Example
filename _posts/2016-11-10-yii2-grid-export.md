@@ -2,7 +2,7 @@
 layout: post
 title: yii2 GridView 导出
 description: 搜索和排序后的结果也可以导出
-date: 2016-11-10 00:00:00
+date: 2016-11-10 00:46:48 +0800
 category: yii2
 tags: yii2,grid
 ---
