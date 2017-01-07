@@ -41,4 +41,4 @@ export HTTPS_PROXY='https://127.0.0.1:1080'
 
 我是在 babun 上用的，http_proxy 对 composer 有效 ，HTTPS_PROXY 对 git 有效，如果你设置没有效果的话，尝试大小写都设置一遍。
 
-在用 composer 时如果配置了 https 的代理，应该会遇到问题，你可以退出重来只设置 http 代理，或者设置为空字符串。
+在用 composer 时如果配置了 https 的代理，应该会遇到问题，你可以退出重来只设置 http 代理，或者设置 https 代理为空字符串。
