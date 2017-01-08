@@ -22,8 +22,8 @@ tags:
 ### windows
 
 ```bash
-SET http_proxy='http://127.0.0.1:1080'
-SET HTTPS_PROXY="https://127.0.0.1:1080"
+set http_proxy='http://127.0.0.1:1080'
+set HTTPS_PROXY="https://127.0.0.1:1080"
 ```
 
 效果是临时的，退出 CMD 失效，你也可以在环境变量下添加，用户变量或系统变量随意，用完后记得删掉。
