@@ -39,11 +39,13 @@ tags: yii2
 
 框架的代码由 [composer](http://docs.phpcomposer.com/) 管理，在项目的 vendor 目录内，另外还有 composer.json 和 composer.lock 两个 composer 的文件，别的目录和文件都是由自己设计，自由度很高。
 
-建议简单了解一下如何使用 composer 安装、添加、更新第三方代码，composer.json 和 composer.lock 两个文件起到什么作用，这是现代 php 程序员都应该要学的一项技能。
+> 建议简单了解一下 composer require、update、install 三个命令，composer.json 和 composer.lock 两个文件起到什么作用，这是现代 php 程序员都应该要学的一项技能。
 
 官方提供了基础和高级两个模板：基础模板提供是单个网站的结构。高级模板提供的是多个网站的结构，在每个网站**有自己独立配置**的同时，还能共用 vendor 目录和自己封装的代码以及一些公共配置，高级模板默认的两个网站一个叫 frontend，一个叫 backend，就是前台和后台的意思。
 
-即使你不懂 git，也要去了解一下 .gitignore 文件的作用，这样你才能知道官方的两个模板里，哪些文件可以提交到版本控制，哪些文件不可以。PHPStorm 可以安装 .ignore 插件，在 .gitignore 文件里的文件，名字都会显示成灰色，即使你不用 git 也最好安装一下。
+即使你不懂 git，也要去了解一下 .gitignore 文件的作用，这样你可以在官方的两个模板里了解哪些文件可以提交到版本控制，哪些文件不可以。
+
+> PHPStorm 可以安装 .ignore 插件，在 .gitignore 文件里的文件，名字都会显示成灰色，即使你不用 git 也最好安装一下。
 
 在模板选择方面，由于一些新人喜欢用百度，挺容易搜到“实现前后台用高级模板”之类的建议，于是有些新人一开始就用了高级模板，可能会造成上手困难之类的问题。其实你完全可以无视前台后台这个命名，就像我说的这样认为是多个网站就行。实际要做一个要求不高的前后台，我用基础模板结合框架的模块就足矣，当然如果你要是想以后方便增加新项目又方便维护自己封装的代码，那么我推荐你使用高级模板来做一个网站（frontend 和 backend 只保留一个，改成其他名字），这些就是我给出的框架模板选择的建议，当然能自己设计那是坠吼的。
 
@@ -53,11 +55,11 @@ tags: yii2
 
 正确的姿势应该是搭建 vhost，**以每一个网站的 web 目录为域名的根目录**，有些用高级模板的新人用一个域名指向项目根目录也是不对的，高级模板里有多少个网站，就要配多少个域名。
 
+具体配置 vhost 方法你可以 google，或者参考官方的[文档](https://github.com/yiisoft/yii2/blob/master/docs/guide-zh-CN/start-installation.md#配置-web-服务器-)，nginx 也可以看[这篇文章](http://www.getyii.com/topic/31)。
+
 最好是能够开启 url 美化以及隐藏脚本文件名，这样的 url 看起来非常简洁。
 
 另外，url 不应该根据路由配置写死，而是用 `yii\helpers\Url::to()` 来生成。前端资源除了可以用这个方法外，也可以去看一下 `yii\web\View` 和 `yii\helpers\Html` 类注册资源文件的方法，甚至你还可以使用资源包来发布任意非 web 目录下资源。
-
-具体配置 vhost 方法你可以 google 或者参考官方的[文档](https://github.com/yiisoft/yii2/blob/master/docs/guide-zh-CN/start-installation.md#配置-web-服务器-)，nginx 也可以看[这篇文章](http://www.getyii.com/topic/31)。
 
 ## PHPStorm
 
