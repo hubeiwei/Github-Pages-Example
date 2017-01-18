@@ -53,7 +53,9 @@ tags: yii2
 
 正确的姿势应该是搭建 vhost，**以每一个网站的 web 目录为域名的根目录**，有些用高级模板的新人用一个域名指向项目根目录也是不对的，高级模板里有多少个网站，就要配多少个域名。
 
-最好是能够开启 url 美化以及隐藏脚本文件名，这样的 url 看起来非常简洁，另外，url 不应该根据路由配置写死，而是用 `yii\helpers\Url::to()` 来生成，具体怎么用，像你这么聪明的肯定会想到去看注释了。
+最好是能够开启 url 美化以及隐藏脚本文件名，这样的 url 看起来非常简洁。
+
+另外，url 不应该根据路由配置写死，而是用 `yii\helpers\Url::to()` 来生成。前端资源除了可以用这个方法外，也可以去看一下 `yii\web\View` 和 `yii\helpers\Html` 类注册资源文件的方法，甚至你还可以使用资源包来发布任意非 web 目录下资源。
 
 具体配置 vhost 方法你可以 google 或者参考官方的[文档](https://github.com/yiisoft/yii2/blob/master/docs/guide-zh-CN/start-installation.md#配置-web-服务器-)，nginx 也可以看[这篇文章](http://www.getyii.com/topic/31)。
 
