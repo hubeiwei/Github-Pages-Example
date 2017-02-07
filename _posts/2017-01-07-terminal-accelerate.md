@@ -37,8 +37,8 @@ export HTTPS_PROXY='https://127.0.0.1:1080'
 
 效果同样是临时的。
 
-### 需要注意的坑
+### 需要注意的问题
 
-我在 Windows 用的终端是 [babun](https://github.com/babun/babun)，http_proxy 对 composer 有效 ，HTTPS_PROXY 对 git 有效，如果你设置没有效果的话，尝试大小写都设置一遍。
+我在 Windows 用的终端是 [babun](https://github.com/babun/babun)，http_proxy 对 composer 有效（其实你在 windows 下安装 composer 的时候有一步就是要设置这个东西，但我的 ss 是按流量算的，怕这个设置是永久的，就没用），HTTPS_PROXY 对 git 有效，如果你设置没有效果的话，尝试大小写都设置一遍。
 
 在用 composer 时如果同时配置了 https 的代理，应该会遇到问题，你可以退出重来只设置 http 代理，或者设置 https 代理为空字符串，还要在命令里加上 `--prefer-dist`，作用是不使用 `git clone` 而是直接下载代码。
