@@ -107,8 +107,12 @@ yii2 的 `GridView` 应该算是挺好用的了，传统的表格你经常需要
 
 ## 打赏
 
-如果觉得我写的内容对你有帮助的话，求打赏一杯 coffee，这样我会有更多动力去写更精品的 yii2 的内容。
+如果觉得我写的内容对你有帮助的话，求打赏一杯 coffee，这样我会有更多动力去分享更多 yii2 的内容。
 
-![alipay](https://raw.githubusercontent.com/hubeiwei/hubeiwei.github.io/master/images/pay/ali_pay.jpg "支付宝")
+<div align="center">
+    <img src="https://raw.githubusercontent.com/hubeiwei/hubeiwei.github.io/master/images/pay/ali_pay.jpg" width="500px" alt="支付宝">
+</div>
 
-![wechat](https://raw.githubusercontent.com/hubeiwei/hubeiwei.github.io/master/images/pay/wechat_pay.png "微信")
+<div align="center">
+    <img src="https://raw.githubusercontent.com/hubeiwei/hubeiwei.github.io/master/images/pay/wechat_pay.png" width="500px" alt="微信">
+</div>
