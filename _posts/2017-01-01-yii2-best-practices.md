@@ -35,11 +35,19 @@ tags: yii2
 
 2. 和其他的框架截然不同的语法，使用组件时的代码通常会很长，对面向对象不熟而且还不懂用 IDE 的人不友好。
 
-3. 如果你不下功夫，你会觉得有一些东西很难用，比如视图的布局和前端资源注册，或者是多层配置。
+3. 如果你不下功夫，你会觉得有一些东西很难用，比如视图的布局和前端资源注册，或者是数组里的多层配置。
+
+## 文档
+
+官网：[http://www.yiiframework.com/doc-2.0/guide-index.html](http://www.yiiframework.com/doc-2.0/guide-index.html)
+
+GitHub：[https://github.com/yiisoft/yii2/tree/master/docs/guide-zh-CN](https://github.com/yiisoft/yii2/tree/master/docs/guide-zh-CN)
+
+为什么我会强调文档？因为有很多人安装框架的方法是在百度找来的，已经过时了，安装 `fxp/composer-asset-plugin` 的版本还是"1.0.0"，官方在2016年7月3日的时候就已经从"~1.1.1"改成"^1.2.0"了，你可以去 GitHub 文档找到[这个记录](https://github.com/yiisoft/yii2/commit/c66121d2b6322a368b6aff4774dcc3228f51b25c)。
 
 ## 框架结构
 
-框架的代码在 vendor 目录内由 [composer](http://docs.phpcomposer.com/) 管理，另外还有 composer.json 和 composer.lock 两个 composer 的文件，别的目录和文件都是由自己设计，自由度很高。
+框架的代码在 vendor 目录内由 [composer](http://docs.phpcomposer.com/) 管理，另外还有 composer.json 和 composer.lock 两个 composer 的文件，别的目录和文件都是由自己设计，自由度很高，你甚至可以几个项目共用一个 composer，例如 yii2 的高级模板。
 
 > 建议简单了解一下 composer 的 `require`、`update`、`install` 三个命令，以及composer.json 和 composer.lock 这两个文件起到什么作用，这是现代 php 程序员都应该要学的一项技能。
 
