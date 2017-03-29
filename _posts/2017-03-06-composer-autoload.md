@@ -49,19 +49,35 @@ tags:
 
 同理，你也可以在项目里建立一个 composer.json 文件，配好 autoload 之后，执行 `composer dump-autoload` 命令，然后把 `vendor/autoload.php` 文件 require 到你的代码里，以后自己的类就不需要一个一个 require 进来了。例如 Laravel 框架就是以 `App` 命名空间来加载 app 目录下的类的。
 
+假如我有两个类，一个是 `\asdf\qwer\Test`，一个是 `\asdf\qwer\zxcv\Test`，你可以把第一个类丢到和 composer.json **同目录**的 `test` 目录下，第二个类丢到 `test\zxcv` 目录，然后你可以在 composer.json 里这么配：
+
+```
+{
+    "autoload": {
+        "psr-4": {
+            "asdf\\qwer\\": "test"
+        }
+    }
+}
+```
+
+然后执行 `composer dump-autoload`，以后只要你引用了命名空间开头是 `\asdf\qwer` 的类，都会到 `test` 目录里找它。
+
 ## yii2 框架的类加载
 
 yii2 本身也有类加载，不依赖 composer，所以 composer.json 可以说是通用的，你可以让多个 yii2 项目共享一个 vendor 目录节约空间，我在第二家公司的时候就是这么干的。
 
-yii2 的类加载也挺好理解的，比如我注册了一个别名 test，这个别名的值是我某目录的路径：
+其实[官方的文档](https://github.com/yiisoft/yii2/blob/master/docs/guide-zh-CN/concept-autoloading.md)已经说的很明白了，你可以去看。
+
+你要是看懂上面 composer 的方法，其实 yii2 的类加载也挺好理解的，比如我注册了一个[别名](https://github.com/yiisoft/yii2/blob/master/docs/guide-zh-CN/concept-aliases.md) test，这个别名的值是我某目录的路径：
 
 ```
 Yii::setAlias('@test', '/path/to/test');
 ```
 
-当我调用 `test\a\b\Test` 类时，命名空间的开头是 `test`，框架就会根据别名 `@test/a/b/Test.php` 来寻找这个类，把别名转换成对应的值就是路径 `/path/to/test/a/b/Test.php` 了。
+当我调用 `\test\a\b\Test` 类时，命名空间的开头是 `test`，框架就会根据别名 `@test/a/b/Test.php` 来寻找这个类，把别名转换成对应的值就是路径 `/path/to/test/a/b/Test.php` 了。
 
-框架自带了一个别名叫 `@app`，它的值和 `yii\base\Application::$basePath` 一致，默认情况下的值就是应用的根目录，比如 basic 模板里的类基本都是 `app` 命名空间下的，advanced 模板则会把应用分为 `@frontend`、`@backend`、`@console`，以及公共目录 `@common`。
+框架自带了一个别名叫 `@app`，它的值和 `yii\base\Application::$basePath` 一致，默认情况下的值就是应用的根目录，比如 basic 模板里的类基本都是 `app` 命名空间下的，advanced 模板则会把应用分为 `@frontend`、`@backend`、`@console`，以及公共目录 `@common`，你看一下这些目录里类的命名空间和路径就明白了。
 
 ## 说在最后
 
