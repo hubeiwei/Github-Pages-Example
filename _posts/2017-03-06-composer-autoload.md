@@ -17,7 +17,7 @@ tags:
 
 在这之前你可以去了解一下 PHP 的 psr-0 和 psr-4，一般我习惯用 psr-4，听说官方已经废弃了 psr-0。
 
-废话不多说，以 [2amigos/yii2-qrcode-helper](https://github.com/2amigos/yii2-qrcode-helper) 的 composer.json 为例，看看他们的类加载：
+以 [2amigos/yii2-qrcode-helper](https://github.com/2amigos/yii2-qrcode-helper) 的 composer.json 为例，看看他们的类加载：
 
 ```
 {
@@ -29,39 +29,28 @@ tags:
 }
 ```
 
-你可能会一脸懵逼，那再看一下他们的目录结构吧：
+再看一下他们的目录结构吧：
 
 ```
-2amigos
-└ yii2-qrcode-helper
-  ├ src
-  │ └ QrCode.php
-  └ composer.json
+vendor
+└ 2amigos
+  └ yii2-qrcode-helper
+    ├ src
+    │ └ QrCode.php
+    └ composer.json
 ```
 
 再看看 src 目录里 `QrCode` 类的命名空间为 `dosamigos\qrcode`。
 
-意思就是，这个包注册了 `dosamigos\qrcode` 这个命名空间，对应的路径是它的 src 目录，这个路径可以理解成是 composer.json 的相对路径（如果是相同目录就留空），当你调用了这个命名空间的类，composer 就会去这个目录找它。
+爱动脑的你一定看出来了，这个包注册了 `dosamigos\qrcode` 这个命名空间，对应的路径是它的 src 目录，这个路径可以理解成是 composer.json 的相对路径（如果是相同目录就留空，当然你也可以试一下绝对路径），当你调用了这个命名空间开头为 `dosamigos\qrcode` 的类，composer 就会去这个 src 目录寻找这个类文件。
 
-例如 `dosamigos\qrcode\a\b\Test` 类对应的路径就是 `vendor/2amigos/yii2-qrcode-helper/src/a/b/Test.php`
+例如 `dosamigos\qrcode\a\b\Test` 类对应的路径就是 vendor/2amigos/yii2-qrcode-helper/src/a/b/Test.php。
 
-如果你想知道 composer 具体是怎么把这个相对路径转化成绝对路径的，你去 `vendor/composer/autoload_psr4.php` 文件看一下就知道了。
+如果你想知道 composer 具体是怎么把这个相对路径转化成绝对路径的，你去 vendor/composer/autoload_psr4.php 文件看一下就知道了。
 
-同理，你也可以在项目里建立一个 composer.json 文件，配好 autoload 之后，执行 `composer dump-autoload` 命令，然后把 `vendor/autoload.php` 文件 require 到你的代码里，以后自己的类就不需要一个一个 require 进来了。例如 Laravel 框架就是以 `App` 命名空间来加载 app 目录下的类的。
+同理，你也可以在项目里建立一个 composer.json 文件，配好 autoload 之后，执行 `composer dump-autoload` 命令，然后把 vendor/autoload.php 文件用 `require` 引入到你的代码里，以后自己的类就不需要一个一个 `require` 进来了。例如 Laravel 框架就是以 `App` 命名空间来加载 app 目录下的类的。
 
-假如我有两个类，一个是 `\asdf\qwer\Test`，一个是 `\asdf\qwer\zxcv\Test`，你可以把第一个类丢到和 composer.json **同目录**的 `test` 目录下，第二个类丢到 `test\zxcv` 目录，然后你可以在 composer.json 里这么配：
-
-```
-{
-    "autoload": {
-        "psr-4": {
-            "asdf\\qwer\\": "test"
-        }
-    }
-}
-```
-
-然后执行 `composer dump-autoload`，以后只要你引用了命名空间开头是 `\asdf\qwer` 的类，都会到 `test` 目录里找它。
+像你这么聪明的，我觉得应该不用举例了吧。
 
 ## yii2 框架的类加载
 
