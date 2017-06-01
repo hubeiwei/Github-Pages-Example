@@ -7,9 +7,9 @@ category: yii2
 tags: yii2
 ---
 
-yii2 是我接触过的几个框架里用 PHPStorm 来学习和开发体验最好的一个，yii2 几乎所有代码都支持了 IDE 的提示，这得益于开发者们在底层内置了大量 PHPDoc 的缘故，但是对于一些自定义的 `components` 比如 `Yii::$app->myComponent->something`, IDE 的提示就无能为力了，这对于追求开发效率和准确性的程序员来说是非常不能忍的事情，但也不是完全没有办法解决这个问题的，以下教大家两种方法。
+yii2 是我接触过的几个框架里用 [PHPStorm](https://www.jetbrains.com/phpstorm/) 来学习和开发体验最好的一个，yii2 几乎所有代码都支持了 IDE 的提示，这得益于开发者们写了 PHPDoc 的缘故，但是对于一些自定义的 `components` 比如 `Yii::$app->myComponent->something`, IDE 的提示就无能为力了，这对于追求开发效率和准确性的程序员来说是非常不能忍的事情，但也不是完全没有办法解决这个问题的，以下教大家两种方法。
 
-以 user 组件的 `identity` 属性（当前登录用户的实例，相当于 `findOne` 出来的类）以及第二个数据库组件（一般只有一个库时用默认的 db，因为底层已经有了 PHPDoc）为例，配置大概如下：
+以 user 组件的 `identity` 属性（当前登录用户的实例，相当于 `findOne` 出来的类）以及第二个数据库组件（一般只有一个库时用默认的 db，因为已经有了 PHPDoc）为例，配置大概如下：
 
 ```php
 return [
@@ -64,11 +64,11 @@ class Helper
     /**
      * 开启事务
      *
-     * @param string $dbComponentName
+     * @param string $db
      * @param string $isolationLevel
      * @return Transaction
      */
-    public static function beginTransaction($dbComponentName = 'db', $isolationLevel = Transaction::SERIALIZABLE)
+    public static function beginTransaction($db = 'db', $isolationLevel = Transaction::SERIALIZABLE)
     {
         /** @var \yii\db\Connection $db */
         $db = Yii::$app->$dbComponentName;
@@ -118,9 +118,9 @@ class User
 
 讲解：
 
-1. 首先我建立了一个 `Yii` 类，它有一个静态属性 `$app`，通过注释声明数据类型为 `MyApplication`。
+1. 首先我建立了一个 `Yii` 类，声明一个静态属性 `$app`，通过注释声明数据类型为 `MyApplication`。
 
-2. 接着在下面建立了一个 `MyApplication` 类，并通过注释声明它拥有 `$user` 和 `$db2` 两个属性，数据类型分别为 `User` 和 `yii\db\Connection`，这时候 db2 组件的代码提示已经完成。
+2. 接着建立了一个 `MyApplication` 类，并通过注释声明它拥有 `$user` 和 `$db2` 两个属性，数据类型分别为 `User` 和 `yii\db\Connection`，这时候 db2 组件的代码提示已经完成。
 
 3. 接着建立一个 `User` 类，通过注释声明它拥有 `$identity` 属性，数据类型为你用户的 `app\models\User`。
 

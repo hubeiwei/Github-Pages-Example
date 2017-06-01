@@ -57,7 +57,7 @@ yii2 上有着大量扩展，加快了开发的速度，在此我也打算分享
 
 ## Module
 
-* [mdmsoft/yii2-admin](https://github.com/mdmsoft/yii2-admin)：该模块提供了编辑 yii2 的 RBAC 表的页面，还附带动态菜单，需求简单的推荐用这个，[mdmsoft](https://github.com/mdmsoft) 还有挺多 yii2 扩展，可以去看看。
+* [mdmsoft/yii2-admin](https://github.com/mdmsoft/yii2-admin)：该模块提供了配置 rbac 的页面，他把 rbac 原本的权限分为了权限和路由，可以使用它附带的中间件来控制不同用户可访问的路由，还附带根据权限来显示的菜单 widget，需求简单的推荐用这个，当然 [mdmsoft](https://github.com/mdmsoft) 还有挺多 yii2 扩展，可以去看看。
 
 ## 图表
 
@@ -73,18 +73,6 @@ yii2 上有着大量扩展，加快了开发的速度，在此我也打算分享
 
 * [mootensai/yii2-enhanced-gii](https://github.com/mootensai/yii2-enhanced-gii)：这套模板生成 model 可以配置添加修改时自动填充的时间和用户字段，其他功能还是自己看吧。
 
-## 网站
+## 开源网站
 
 * [Get√Yii](https://github.com/iiYii/getyii)
-
-## 打赏
-
-以上还有很多扩展还在学习中，如果你对我分享的内容有兴趣的话，可以向我打赏，让我更有动力去写这些扩展的教程。
-
-<div align="center">
-    <img src="https://raw.githubusercontent.com/hubeiwei/hubeiwei.github.io/master/images/pay/ali_pay.jpg" width="600px" alt="支付宝">
-</div>
-
-<div align="center">
-    <img src="https://raw.githubusercontent.com/hubeiwei/hubeiwei.github.io/master/images/pay/wechat_pay.png" width="600px" alt="微信">
-</div>
