@@ -11,12 +11,12 @@
 
 # 老胡的补充
 
-* 原本用的是google的代码高亮，现在改成highlight.js了。
+* 原本用的是 google 的代码高亮，现在改成 highlight.js 了。
 
-* 作者弄的评论功能用的是 [disqus](https://disqus.com/)，如果要拿这一套模板来用的话，需要把 /assets/js/post.js 里的 disqus_shortname 改成自己的，往下一点点还有个域名也要改成自己的。
+* 作者弄的评论功能用的是 [disqus](https://disqus.com/)，如果要拿这一套模板来用的话，需要把 assets/js/post.js 里的 disqus_shortname 改成自己的，往下一点点还有个域名也要改成自己的。
 
 * 另外根目录里还有些东西要改，自己翻一下吧。
 
 * 尝试过把时区改成上海的，但没有效果，文章的 date 加上 +0800 即可。
 
-* 根据个人胃口改了一下文章内容的样式，直接在[这篇文章](https://github.com/guodongxiaren/README)的 README 抠 GitHub 的样式，前端和 Jekyll 都不是很熟，以后慢慢学吧。
+* 直接在 GitHub 抠了 MarkDown 的样式，前端和 Jekyll 都不是很熟，以后慢慢学吧。
