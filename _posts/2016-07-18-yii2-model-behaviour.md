@@ -1,6 +1,6 @@
 ---
 layout: post
-title: yii2 自动填充字段
+title: 使用 yii2 行为自动填充字段
 description: 学习偷懒
 date: 2016-07-18 01:37:00 +0800
 category: yii2
