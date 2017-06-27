@@ -23,22 +23,24 @@ tags:
 
 ```bash
 set http_proxy='http://127.0.0.1:1080'
-set HTTPS_PROXY="https://127.0.0.1:1080"
+set https_proxy="https://127.0.0.1:1080"
 ```
 
-效果是临时的，退出 CMD 失效，你也可以在环境变量下添加，用户变量或系统变量随意，用完后记得删掉。
+效果是临时的，退出 CMD 失效。
+
+有个不是很推荐的方法，在环境变量下添加 http_proxy 和 https_proxy，做到真正的全局代理，但是，如果你的 ShadowSocks 是按流量计费的话，很快就会用完了，或者说，你 ShadowSocks 的速度不够快的话，你上网体验会降低。
+
+> 在 windows 安装 composer 的时候，其中有一步会叫你设置代理，其实就是帮你添加一个 http_proxy 到环境变量里，如果你想提高 composer 安装的成功率的话，不妨设置一下，完成后记得删掉。
 
 ### Linux
 
 ```bash
 export http_proxy='http://127.0.0.1:1080'
-export HTTPS_PROXY='https://127.0.0.1:1080'
+export https_proxy='https://127.0.0.1:1080'
 ```
 
 效果同样是临时的。
 
 ### 需要注意的问题
 
-我在 Windows 用的终端是 [babun](https://github.com/babun/babun)，http_proxy 对 composer 有效（其实你在 windows 下安装 composer 的时候有一步就是要设置这个东西，但我的 ss 是按流量算的，怕这个设置是永久的，就没用），HTTPS_PROXY 对 git 有效，如果你设置没有效果的话，尝试大小写都设置一遍。
-
-在用 composer 时如果同时配置了 https 的代理，应该会遇到问题，你可以退出重来只设置 http 代理，或者设置 https 代理为空字符串，还要在命令里加上 `--prefer-dist`，作用是不使用 `git clone` 而是直接下载代码。
+在用 composer 时如果配置了 https_proxy，应该会遇到报错，你可以退出重来只设置 http_proxy，或者设置 https_proxy 为空字符串，还要在命令里加上 `--prefer-dist`，作用是不使用 `git clone` 而是直接下载代码（因为 GitHub 的 clone 是走 https）。
