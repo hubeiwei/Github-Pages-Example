@@ -33,7 +33,7 @@ public function beforeSave($insert)
 }
 ```
 
-这应该是最简单的一个方法，但以后要是有其他需求在 `beforeSave()` 方法里加代码的话，代码混在一起，可能会搞得很乱，所以强烈推荐使用 `behaviour()`：
+这应该是最简单的一个方法，但以后要是有其他需求在 `beforeSave()` 方法里加代码的话，代码混在一起，可能会搞得很乱，所以强烈推荐使用 `behaviours()`：
 
 ```php
 use yii\behaviors\BlameableBehavior;
@@ -48,10 +48,11 @@ public function behaviors()
         BlameableBehavior::className(),// 不进行任何配置
         [
             'class' => TimestampBehavior::className(),
+            // 修改时填充 updated_at 字段
             'attributes' => [
-                parent::EVENT_BEFORE_UPDATE => 'updated_at',// 修改时填充 updated_at 字段
+                parent::EVENT_BEFORE_UPDATE => 'updated_at',
             ],
-            'value' => date('Y-m-d H:i:s'),// 填充的值
+            'value' => date('Y-m-d H:i:s'),// 填充的值，默认 time()
         ],
     ];
 }
@@ -61,6 +62,6 @@ public function behaviors()
 
 第一个行为我没有进行任何配置，这是为了告诉大家，这两个类其实是有默认配置的，所以这些默认配置如果和自己的需求符合的话，就可以直接添加类名，你去把这两个类的内容看一遍就知道了。
 
-需要补充的是，在执行 `save()` 方法的时候，会先进行验证，再触发 `yii\db\BaseActiveRecord::EVENT_BEFORE_INSERT` 和 `yii\db\BaseActiveRecord::EVENT_BEFORE_UPDATE` 两个事件，所以相关字段如果有非空之类的规则的话，`save()` 是无法成功的，可以考虑取消相关字段的非空规则，或者，如果你已经确认接收到的数据是安全的，可以使用 `save(false)`。
+需要补充的是，在执行 `save()` 方法的时候，会先进行验证，再触发事件，所以相关字段如果有非空之类的规则的话，`save()` 是无法成功的，可以考虑取消相关字段的非空规则，或者如果你已经确认接收到的数据是安全的，可以使用 `save(false)`。
 
 最后，这两个类的父类 `yii\behaviors\AttributeBehavior`，如果你有更多的想法，不妨试试用这个来实现。
