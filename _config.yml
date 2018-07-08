@@ -2,7 +2,7 @@ permalink: /:year/:month/:title
 
 title: http://hubeiwei.xyz/
 description: hubeiwei's Blog
-url: http://http://hubeiwei.xyz
+url: http://hubeiwei.xyz
 
 markdown: kramdown
 kramdown:
