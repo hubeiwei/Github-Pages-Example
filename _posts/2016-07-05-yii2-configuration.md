@@ -7,7 +7,7 @@ category: yii2
 tags: yii2
 ---
 
-`yii\base\BaseObject` 这个类，是 yii2 里99.99%的类的最顶端的父类，它提供了属性这一个概念，具体可以看[官方文档](https://www.yiiframework.com/doc/guide/2.0/zh-cn/concept-properties)。
+`yii\base\BaseObject` 这个类，是 yii2 里最顶端的父类，它提供了属性这一个概念，具体可以看[官方文档](https://www.yiiframework.com/doc/guide/2.0/zh-cn/concept-properties)。
 
 类的配置就是遵循属性这一个概念的，其实我觉得[官方文档](https://www.yiiframework.com/doc/guide/2.0/zh-cn/concept-configurations)就说得很明白了，所以本文就不重复讲这些内容了，只讲些可能需要注意的点。
 
@@ -109,7 +109,7 @@ echo GridView::widget([
 ]);
 ```
 
-如果看过 `yii\grid\GridView` 的属性的话，你会发现 `yii\grid\GridView::$dataColumnClass` 告诉你 `$columns` 里每一项默认都是 `yii\grid\DataColumn` 这个类，所以在以上示例的 `columns` 里有些内容没有显式配置 `class`，如果需要显示行号可以使用 `yii\grid\SerialColumn`，如果需要一些操作按钮的话，则可以用 `yii\grid\ActionColumn`。
+如果看过 `yii\grid\GridView` 的属性的话，你会发现 `yii\grid\GridView::$dataColumnClass` 告诉你 `yii\grid\GridView::$columns` 里每一项默认都是 `yii\grid\DataColumn` 这个类，所以在以上示例的 `columns` 里有些内容没有显式配置 `class`，如果需要显示行号可以使用 `yii\grid\SerialColumn`，如果需要一些操作按钮的话，则可以用 `yii\grid\ActionColumn`。
 
 ## ActiveForm
 
