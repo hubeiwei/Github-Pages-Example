@@ -43,6 +43,6 @@ export https_proxy='https://127.0.0.1:1080'
 
 ### 需要注意的问题
 
-clone GitHub 的项目时使用的是 https_proxy。
+GitHub 的项目 clone 下来时使用的是 https_proxy。
 
-使用 composer 时不要设置 https_proxy，或者把https_proxy设置为空字符串，在执行 composer 命令时，检查 ss 的详细日志你会发现根本没有连接（即使你配置了 http_proxy），可能你会等半天然后出来一堆错误。强烈建议在命令里加上 `--prefer-dist`，作用是不使用 `git clone` 而是直接下载代码，才可以走 http_proxy，而且这样每个包里都不会有你用不到的 .git 目录存在。
+使用 composer 时不要设置 https_proxy，已经设置了 https_proxy 的要改为空字符串。假如你设置了 https_proxy，在执行 composer 命令时，检查 ss 的详细日志你会发现根本没有连接在活动（即使你配置了 http_proxy），可能你会等半天然后出来一堆错误。强烈建议在命令里加上 `--prefer-dist`，作用是不使用 `git clone` 而是直接下载代码压缩包，而且是走 http_proxy，而且这样每个包里都不会有你用不到的 .git 目录存在。
